@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body {
-  background-color: #F0266C;
+  background-color: black;
   font-family: museo-sans, helvetica, verdana, arial, sans-serif;
   color: white;
   text-align: center;
@@ -23,4 +23,9 @@ p {
   line-height: 1.6em;
   font-weight: 300;
 
+}
+
+.main-content {
+  margin: 0 auto; 
+  margin-top: 150px;
 }
