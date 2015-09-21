@@ -1,0 +1,145 @@
+.demos
+  %nav#site-nav
+    %h1
+      %a{:href => "../index.html"} jQuery Masonry
+    %h2 Docs
+    %ul.docs-list
+      %li
+        %a{:href => "../docs/intro.html"} Introduction
+      %li
+        %a{:href => "../docs/options.html"} Options
+      %li
+        %a{:href => "../docs/methods.html"} Methods
+      %li
+        %a{:href => "../docs/animating.html"} Animating
+    %h2 Demos
+    %ul.demos-list
+      %li
+        %a{:href => "../demos/basic-single-column.html"} Basic single-column
+      %li
+        %a{:href => "../demos/basic-multi-column.html"} Basic multi-column
+      %li
+        %a{:href => "../demos/images.html"} Images
+      %li
+        %a{:href => "../demos/tumblelog.html"} Tumblelog example
+      %li.current
+        %a{:href => "#content"} Animating with jQuery
+      %li
+        %a{:href => "../demos/animating-css-transitions.html"} Animating with CSS Transitions
+      %li
+        %a{:href => "../demos/animating-modernizr.html"} Animating with Modernizr
+      %li
+        %a{:href => "../demos/adding-items.html"} Adding items
+      %li
+        %a{:href => "../demos/infinite-scroll.html"} Infinite Scroll
+      %li
+        %a{:href => "../demos/gutters.html"} Gutters
+      %li
+        %a{:href => "../demos/right-to-left.html"} Right-to-left
+      %li
+        %a{:href => "../demos/centered.html"} Centered
+  / #site-nav
+  %section#content
+    %h1 Animating with jQuery
+    #copy
+      %p
+        Rearrangements can be animated when the container is resized by setting
+        %code animated
+        option to
+        = succeed "." do
+          %code true
+        %code animationOptions
+      .highlight
+        %pre
+          %code.javascript
+            %span.nx $
+            %span.p (
+            %span.s1 '#container'
+            %span.p ).
+            %span.nx masonry
+            %span.p ({
+            %span.nx itemSelector
+            %span.o :
+            %span.s1 '.box'
+            %span.p ,
+            %span.nx columnWidth
+            %span.o :
+            %span.mi 100
+            %span.p ,
+            %span.nx isAnimated
+            %span.o :
+            %span.kc true
+            %span.p });
+    #container.clearfix.masonry{:style => "position: relative; height: 444px;"}
+      .box.col2.masonry-brick{:style => "position: absolute; top: 5px; left: 5px;"}
+        %p Sit amet mi ullamcorper vehicula
+      .box.col1.masonry-brick{:style => "position: absolute; top: 5px; left: 205px;"}
+        %p Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.
+      .box.col2.masonry-brick{:style => "position: absolute; top: 5px; left: 305px;"}
+        %p Ut condimentum mi vel tellus. Suspendisse laoreet. Fusce ut est sed dolor gravida convallis. Morbi vitae ante. Vivamus ultrices luctus nunc. Suspendisse et dolor. Etiam dignissim. Proin malesuada adipiscing lacus. Donec metus. Curabitur gravida.
+        %p Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.
+      .box.col3.masonry-brick{:style => "position: absolute; top: 5px; left: 505px;"}
+        %p Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis, adipiscing varius, adipiscing in, lacinia vel, tellus. Suspendisse ac urna. Etiam pellentesque mauris ut lectus. Nunc tellus ante, mattis eget, gravida vitae, ultricies ac, leo. Integer leo pede, ornare a, lacinia eu, vulputate vel, nisl.
+      .box.col1.masonry-brick{:style => "position: absolute; top: 5px; left: 805px;"}
+        %p Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis.
+      .box.col2.masonry-brick{:style => "position: absolute; top: 5px; left: 905px;"}
+        %p Vestibulum volutpat, lacus a ultrices sagittis,
+        %p Fusce accumsan mollis eros. Pellentesque a diam sit amet mi ullamcorper vehicula
+      .box.col2.masonry-brick{:style => "position: absolute; top: 5px; left: 1105px;"}
+        %p Sit amet mi ullamcorper vehicula
+      .box.col1.masonry-brick{:style => "position: absolute; top: 5px; left: 1305px;"}
+        %p Morbi purus libero
+      .box.col1.masonry-brick{:style => "position: absolute; top: 5px; left: 1405px;"}
+        %p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
+      .box.col3.masonry-brick{:style => "position: absolute; top: 66px; left: 1105px;"}
+        %p Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.
+        %p Vestibulum volutpat, lacus a ultrices sagittis,
+        %ul
+          %li Lacus a ultrices sagittis
+          %li Democratis
+          %li Plummus
+      .box.col1.masonry-brick{:style => "position: absolute; top: 5px; left: 1505px;"}
+        %p Fusce accumsan mollis eros. Pellentesque a diam sit amet mi ullamcorper vehicula
+      .box.col1.masonry-brick{:style => "position: absolute; top: 51px; left: 5px;"}
+        %p Sit amet mi ullamcorper vehicula
+      .box.col1.masonry-brick{:style => "position: absolute; top: 51px; left: 105px;"}
+        %h2 Morbi purus libero
+      .box.col2.masonry-brick{:style => "position: absolute; top: 111px; left: 105px;"}
+        %p Ut condimentum mi vel tellus. Suspendisse laoreet. Fusce ut est sed dolor gravida convallis. Morbi vitae ante. Vivamus ultrices luctus nunc. Suspendisse et dolor. Etiam dignissim. Proin malesuada adipiscing lacus. Donec metus. Curabitur gravida.
+        %p Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.
+      .box.col1.masonry-brick{:style => "position: absolute; top: 122px; left: 905px;"}
+        %p Fusce accumsan mollis eros. Pellentesque a diam sit amet mi ullamcorper vehicula
+      .box.col1.masonry-brick{:style => "position: absolute; top: 122px; left: 1005px;"}
+        %p adipiscing in, lacinia vel, tellus. Suspendisse ac urna. Etiam pellentesque mauris ut lectus.
+      .box.col2.masonry-brick{:style => "position: absolute; top: 141px; left: 505px;"}
+        %p Sit amet mi ullamcorper vehicula
+      .box.col1.masonry-brick{:style => "position: absolute; top: 127px; left: 5px;"}
+        %p Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.
+      .box.col3.masonry-brick{:style => "position: absolute; top: 187px; left: 505px;"}
+        %p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.
+        %p Fusce accumsan mollis eros. Pellentesque a diam sit amet mi ullamcorper vehicula
+        %p Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus.
+      .box.col2.masonry-brick{:style => "position: absolute; top: 197px; left: 305px;"}
+        %p adipiscing in, lacinia vel, tellus. Suspendisse ac urna. Etiam pellentesque mauris ut lectus.
+        %p Ut convallis, sem sit amet interdum consectetuer, odio augue aliquam leo, nec dapibus tortor nibh sed augue.  Sed vel lacus. Mauris nibh felis, adipiscing varius, adipiscing in, lacinia vel, tellus. Suspendisse ac urna. Etiam pellentesque mauris ut lectus. Nunc tellus ante, mattis eget, gravida vitae, ultricies ac, leo. Integer leo pede, ornare a, lacinia eu, vulputate vel, nisl.
+      .box.col1.masonry-brick{:style => "position: absolute; top: 141px; left: 1505px;"}
+        %p Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.
+      .box.col1.masonry-brick{:style => "position: absolute; top: 201px; left: 805px;"}
+        %p Fusce accumsan mollis eros. Pellentesque a diam sit amet mi ullamcorper vehicula
+    / #container
+    %script{:src => "file://localhost/Users/dana/Downloads/masonry-site/js/jquery-1.6.1.min.js"}
+    %script{:src => "file://localhost/Users/dana/Downloads/masonry-site/jquery.masonry.js"}
+    :javascript
+      $(function(){
+        
+        $('#container').masonry({
+          itemSelector: '.box',
+          columnWidth: 100,
+          isAnimated: true
+        });
+        
+      });
+    %footer#site-footer
+      jQuery Masonry by
+      %a{:href => "http://desandro.com"} David DeSandro
+  / #content

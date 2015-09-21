@@ -1,0 +1,61 @@
+.container
+  .row
+    .header
+      %h1.header__heading A Responsive Grid with SASS
+      %small.header__small By Dana Iti - 21st September 2015
+      %h2.header__sub Why should I use this grid?
+      %p.header__copy Semantic markup - Omits the use of column class names within HTML markup.
+      %p.header__copy Configurable - Ability to change gutter widths or breakpoints.
+
+.container
+  .row
+    .col.col--6 6
+    .col.col--6 6
+  .row
+    .col.col--7 7
+    .col.col--5 5
+
+  .row
+    .col.col--8 8
+    .col.col--4 4
+
+  .row
+    .col.col--9 9
+    .col.col--3 3
+
+  .row
+    .col.col--10 10
+    .col.col--2 2
+
+  .row
+    .col.col--11 11
+    .col.col--1 1
+
+  .row
+    - (1..12).each do
+      .col.col--1 1
+
+.container
+  .row
+    .section
+      %h2 Usage
+      %pre
+        %code.language-css.language-haml
+          :preserve
+
+            .nav--left {
+              @include grid(4);
+              @include breakpoint(tablet, 4);
+              @include breakpoint(mobile, 12);
+            }
+
+            .main-content {
+              @include grid(8);
+              @include breakpoint(tablet, 8);
+              @include breakpoint(mobile, 12);
+            }
+
+      %p 
+        %strong Note:
+        Do not use .col--* classes in your mark-up.
+      %p The grid example above is using .col--* class names for this demo only.

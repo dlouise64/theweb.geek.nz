@@ -1,31 +1,3 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
-body {
-  background-color: black;
-  font-family: museo-sans, helvetica, verdana, arial, sans-serif;
-  color: white;
-  text-align: center;
-  -webkit-font-smoothing: antialiased;
-}
-
-h1 {
-  font-family: neuropol-nova, helvetica, verdana, arial, sans-serif;
-  font-size: 62px;
-}
-
-h2, h3 {
-  font-weight: 300;
-}
-p {
-  font-size: 18px;
-  line-height: 1.6em;
-  font-weight: 300;
-
-}
-
-.main-content {
-  margin: 0 auto; 
-  margin-top: 150px;
-}

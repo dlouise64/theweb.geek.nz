@@ -1,4 +1,7 @@
 class PagesController < ApplicationController
-  def grid
+
+  def home
+    
   end
+
 end

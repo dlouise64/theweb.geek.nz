@@ -1,0 +1,92 @@
+/* VARIABLES
+========================================================================== */
+
+/* Grid Defaults */
+$grid-columns: 12!default;
+$grid-gutter: 3% !default; // 30px
+$fold: left !default;
+$push: 0 !default;
+$transitions: true;
+
+// Breakpoints
+$breakpoint-lg: 1170px;
+$breakpoint-md: 970px;
+$breakpoint-sm: 750px;
+$breakpoint-xs: 320px;
+
+// Min & Max widths
+$container-gutter: ($breakpoint-lg / 100)  * $grid-gutter / ($grid-gutter / 2);
+
+$max-width: $breakpoint-lg + $container-gutter;
+$min-width: $breakpoint-xs - 30px;
+
+*,
+*:after,
+*:before {
+  @include box-sizing;
+}
+
+body{
+  overflow-y: scroll;
+}
+
+.container {
+  @include clearfix;
+  max-width: $max-width;
+  min-width: $min-width;
+  margin: 0 auto;
+}
+
+.row {
+  @include clearfix;
+  width: 100%;
+  margin: 30px 0;
+}
+
+
+
+.col {
+  padding: 20px;
+  text-align: center;
+  background-color: lighten($grid-hashbang, 10%);
+  cursor: pointer;
+  &:hover {
+    background: $grid-hashbang;
+  }
+}
+
+@for $i from 1 through 12 {
+  .col--#{$i} {
+    @include grid($i);
+    @include breakpoint(tablet, 12);
+    @include breakpoint(mobile, 12);
+  }
+}
+
+
+.header {
+  @include grid(12);
+  @include breakpoint(tablet, 12);
+  @include breakpoint(mobile, 12);
+  color: black;
+
+  &__heading {
+    margin-bottom: 10px;
+  }
+
+  &__small {
+    display: inline-block;
+    margin-bottom: 30px;
+  }
+
+}
+
+
+.section {
+  @include grid(12);
+  @include breakpoint(tablet, 12);
+  @include breakpoint(mobile, 12);
+  margin: 15px 0;
+  padding: 20px;
+  color: black;
+}

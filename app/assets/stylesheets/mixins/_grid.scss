@@ -1,0 +1,13 @@
+@mixin grid($grid-column, $grid-size: $grid-columns, $margin: $grid-gutter) {
+
+  @if $transitions == true {
+    @include transition;
+  }
+  
+  float: left;
+  width: (100% / ($grid-size / $grid-column)) - $margin ;
+  color: white;
+  margin-left: ($margin / 2);
+  margin-right: ($margin / 2);
+
+}

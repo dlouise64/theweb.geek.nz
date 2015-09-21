@@ -1,0 +1,27 @@
+@mixin breakpoint($screen-size, $grid-column, $grid-size: $grid-columns) {
+
+  @if $screen-size == desktop {
+
+    @media only screen and (max-width: $breakpoint-md) {
+      width: (((100%  / $grid-size) * $grid-column) - $grid-gutter ) ;
+      margin: $grid-gutter / 2;
+    }
+  }
+
+  @else if $screen-size == tablet {
+
+    @media only screen and (max-width: $breakpoint-md) {
+      width: (((100%  / $grid-size) * $grid-column) - $grid-gutter ) ;
+      margin: $grid-gutter / 2;
+    }
+  }
+
+  @else if $screen-size == mobile {
+
+    @media only screen and (max-width: $breakpoint-xs) {
+      width: (((100%  / $grid-size) * $grid-column) - $grid-gutter ) ;
+      margin: $grid-gutter / 2;
+    }
+  }
+
+}

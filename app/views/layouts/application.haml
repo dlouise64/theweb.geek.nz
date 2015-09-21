@@ -1,12 +1,10 @@
 !!!
 %html
   %head
-    %title The Web Geek
+    %title GridSystem
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
-    %script{:src => "//use.typekit.net/okr0cil.js"}
-    :javascript
-      try{Typekit.load();}catch(e){}
+    %meta{:content => "width=device-width", :name => "viewport"}/
   %body
     = yield
