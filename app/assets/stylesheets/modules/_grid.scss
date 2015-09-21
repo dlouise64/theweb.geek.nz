@@ -83,7 +83,7 @@ body{
 
 
 .section {
-  @include grid(12);
+  @include breakpoint(desktop, 12);
   @include breakpoint(tablet, 12);
   @include breakpoint(mobile, 12);
   margin: 15px 0;

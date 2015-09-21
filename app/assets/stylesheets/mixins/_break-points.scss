@@ -2,7 +2,7 @@
 
   @if $screen-size == desktop {
 
-    @media only screen and (max-width: $breakpoint-md) {
+    @media only screen and (max-width: $breakpoint-lg) {
       width: (((100%  / $grid-size) * $grid-column) - $grid-gutter ) ;
       margin: $grid-gutter / 2;
     }
