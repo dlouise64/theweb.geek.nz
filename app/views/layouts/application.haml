@@ -5,7 +5,10 @@
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application'
     = csrf_meta_tags
-    %meta{:content => "width=device-width", :name => "viewport"}/
+    %meta{:content => "width=device-width", :name => "viewport"}
+    %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}
+    /[if lt IE 9]
+      = javascript_include_tag 'respond'
   %body
     %nav.nav--main
       .container

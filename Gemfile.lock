@@ -105,6 +105,8 @@ GEM
     rake (10.4.2)
     rdoc (4.2.0)
       json (~> 1.4)
+    respond-js-rails (1.4.2.1)
+      railties (~> 4.0, < 5.0)
     sass (3.4.13)
     sass-rails (5.0.3)
       railties (>= 4.0.0, < 5.0)
@@ -148,6 +150,7 @@ DEPENDENCIES
   normalize-rails
   pg (= 0.15.1)
   rails (= 4.2.0)
+  respond-js-rails
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   spring
