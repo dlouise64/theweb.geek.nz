@@ -1,0 +1,6 @@
+.pull {
+  &--right {
+    @include clearfix;
+    float: right;
+  }
+}

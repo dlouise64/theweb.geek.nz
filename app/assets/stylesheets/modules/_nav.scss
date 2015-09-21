@@ -1,0 +1,33 @@
+.nav {
+
+  &--main {
+    background-color: $black;
+  }
+
+  &__content {
+    @include grid(12);
+    @include breakpoint(tablet, 12);
+    @include breakpoint(mobile, 12);
+  }
+
+  &__logo {
+    display: inline;
+    color: $white;
+    text-decoration: none;
+    line-height: 50px;
+  }
+
+  &__list {
+    list-style: none;
+    padding-left: 0;
+    height: 50px;
+    line-height: 50px;
+  }
+
+  &__item {
+    display: inline-block;
+    height: 50px;
+    color: $white;
+    text-decoration: none;
+  }
+}

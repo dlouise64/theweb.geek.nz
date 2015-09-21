@@ -1,0 +1,5 @@
+.main-content {
+  @include grid(12);
+  @include breakpoint(tablet, 12);
+  @include breakpoint(mobile, 12);
+}

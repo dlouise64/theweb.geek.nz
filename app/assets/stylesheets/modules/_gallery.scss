@@ -1,0 +1,39 @@
+.gallery {
+  margin-top: 50px;
+
+  &__list {
+    padding-left: 0;
+    @include respond-to(mobile) {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    @include respond-to(tablet) {
+      text-align: center;
+    }
+  }
+
+  &__item {
+    display: inline-block;
+    padding-right: 10px;
+
+    &:last-child {
+      padding-right: 0;
+    }
+
+    @include respond-to(mobile) {
+      &:last-child {
+        display: none;
+      }
+    }
+    @include respond-to(mobile) {
+      display: inline-block;
+      padding-right: 0;
+    }
+  }
+
+  &__img {
+    border: 10px solid $black;
+    height: 278px;
+    margin-bottom: 10px;
+  }
+}

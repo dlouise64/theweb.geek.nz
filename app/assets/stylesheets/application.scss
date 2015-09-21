@@ -1,5 +1,11 @@
-@import "base/base";
+//@import "normalize-rails";
+
+@import "globals/base";
 @import "globals/globals";
 @import "mixins/mixins";
 @import "modules/modules";
-@import "prism"
+@import "layout/layout";
+
+@import "helpers/helpers";
+
+@import "prism";

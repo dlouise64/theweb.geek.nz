@@ -26,9 +26,6 @@ $min-width: $breakpoint-xs - 30px;
   @include box-sizing;
 }
 
-body{
-  overflow-y: scroll;
-}
 
 .container {
   @include clearfix;
@@ -68,15 +65,26 @@ body{
   @include grid(12);
   @include breakpoint(tablet, 12);
   @include breakpoint(mobile, 12);
+  @include rem('font-size', 12px);
   color: black;
 
   &__heading {
     margin-bottom: 10px;
+    font-weight: 400;
+  }
+
+  &__sub {
+    @include rem('font-size', 12px);
+    font-weight: 700;
   }
 
   &__meta {
     display: inline-block;
     margin-bottom: 30px;
+  }
+
+  &__list {
+    line-height: 1.7;
   }
 
 }

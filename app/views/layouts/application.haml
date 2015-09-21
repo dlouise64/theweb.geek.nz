@@ -1,10 +1,16 @@
 !!!
 %html
   %head
-    %title A Responsive Grid with Sass | The Web Geek
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
-    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    %title The Web Geek (Beta)
+    = stylesheet_link_tag    'application', media: 'all'
+    = javascript_include_tag 'application'
     = csrf_meta_tags
     %meta{:content => "width=device-width", :name => "viewport"}/
   %body
+    %nav.nav--main
+      .container
+        .nav__content
+          = link_to "The Web Geek (Beta)", root_url, class: "nav__logo"
+          %ul.nav__list.pull--right
+            %li= link_to "About", about_url, class: "nav__item"
     = yield

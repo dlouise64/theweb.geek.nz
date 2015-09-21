@@ -4,7 +4,7 @@
 
     @media only screen and (max-width: $breakpoint-lg) {
       width: (((100%  / $grid-size) * $grid-column) - $grid-gutter ) ;
-      margin: $grid-gutter / 2;
+      margin: 0 ($grid-gutter / 2);
     }
   }
 
@@ -12,7 +12,7 @@
 
     @media only screen and (max-width: $breakpoint-md) {
       width: (((100%  / $grid-size) * $grid-column) - $grid-gutter ) ;
-      margin: $grid-gutter / 2;
+      margin: 0 ($grid-gutter / 2);
     }
   }
 
@@ -20,8 +20,27 @@
 
     @media only screen and (max-width: $breakpoint-xs) {
       width: (((100%  / $grid-size) * $grid-column) - $grid-gutter ) ;
-      margin: $grid-gutter / 2;
+      margin: 0 ($grid-gutter / 2);
     }
   }
 
+}
+
+
+@mixin respond-to($screen-size) {
+
+  @if $screen-size == mobile {
+
+    @media only screen and (min-width: $breakpoint-xs){ @content; }
+  }
+
+  @else if $screen-size == tablet {
+
+    @media only screen and (min-width: $breakpoint-md){ @content; }
+  }
+
+  @else if $screen-size == desktop {
+
+    @media only screen and (min-width: $breakpoint-lg){ @content; }
+  }
 }
